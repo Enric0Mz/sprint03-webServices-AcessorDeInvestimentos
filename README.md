@@ -200,6 +200,10 @@ A seguir, exemplos das principais operações da API. Utilize uma ferramenta com
 ]
 ```
 
+## Postman
+
+O Postman da Aplicação foi compartilhado com o email profcarlos.oliveira@fiap.com.br para a avaliação
+
 ## Diagram da Arquitetura
 
 ![alt text](./images/image.png)
