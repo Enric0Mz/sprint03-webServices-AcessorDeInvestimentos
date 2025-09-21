@@ -2,11 +2,11 @@
 
 ## Integrantes
 
-Breno Silva - RM97864
-Enrico Marquez - RM99325
-Gustavo Dias - RM550820
-Joel Barros - RM550378
-Leonardo Moreira - RM550988
+- Breno Silva - RM97864
+- Enrico Marquez - RM99325
+- Gustavo Dias - RM550820
+- Joel Barros - RM550378
+- Leonardo Moreira - RM550988
 
 ## Descrição do Projeto
 
