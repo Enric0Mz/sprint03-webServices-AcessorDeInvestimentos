@@ -24,6 +24,7 @@ public class ProductService {
         Product newProduct = new Product();
         newProduct.setTicker(createProductDto.ticker());
         newProduct.setName(createProductDto.name());
+        newProduct.setRiskLevel(createProductDto.riskLevel());
 
         Product savedProduct = productRepository.save(newProduct);
         return new ProductDto(savedProduct);

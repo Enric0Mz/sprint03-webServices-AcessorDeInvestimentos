@@ -21,6 +21,10 @@ public class Product {
 
     @Column(nullable = false)
     private String name;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private RiskLevel riskLevel;
     
     public Product() {}
 
