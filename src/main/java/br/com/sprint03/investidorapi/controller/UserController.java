@@ -45,7 +45,7 @@ public class UserController {
         UserDto user = userService.findById(id);
         return ResponseEntity.ok(user);
     }
-    
+
     @PutMapping("/{id}")
     public ResponseEntity<UserDto> update(
             @PathVariable UUID id,
@@ -53,6 +53,12 @@ public class UserController {
     ) {
         UserDto updatedUser = userService.update(id, updateUserDto);
         return ResponseEntity.ok(updatedUser);
+    }
+    
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable UUID id) {
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

@@ -57,4 +57,12 @@ public class UserService {
 
         return new UserDto(updatedUser);
     }
+    
+    @Transactional
+    public void delete(UUID id) {
+        if (!userRepository.existsById(id)) {
+            throw new RuntimeException("User not found");
+        }
+        userRepository.deleteById(id);
+    }
 }
