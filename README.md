@@ -191,3 +191,12 @@ A seguir, exemplos das principais operações da API. Utilize uma ferramenta com
   }
 ]
 ```
+
+## Diagram da Arquitetura
+
+![alt text](./images/image.png)
+![alt text](./images/image-1.png)
+
+## Diagram de Entidades
+
+![alt text](./images/image-2.png)
