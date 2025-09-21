@@ -1,5 +1,7 @@
 package br.com.sprint03.investidorapi.service;
 
+import br.com.sprint03.investidorapi.exception.ResourceNotFoundException;
+
 import br.com.sprint03.investidorapi.dto.CreateUserDto;
 import br.com.sprint03.investidorapi.dto.UpdateUserDto;
 import br.com.sprint03.investidorapi.dto.UserDto;
@@ -32,7 +34,7 @@ public class UserService {
     }
     public UserDto findById(UUID id) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found")); // Provisório
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id)); // Provisório
         return new UserDto(user);
     }
 
@@ -46,7 +48,7 @@ public class UserService {
     @Transactional
     public UserDto update(UUID id, UpdateUserDto updateUserDto) {
         User user = userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + id));
 
         user.setName(updateUserDto.name());
         user.setEmail(updateUserDto.email());
@@ -57,11 +59,11 @@ public class UserService {
 
         return new UserDto(updatedUser);
     }
-    
+
     @Transactional
     public void delete(UUID id) {
         if (!userRepository.existsById(id)) {
-            throw new RuntimeException("User not found");
+            throw new ResourceNotFoundException("User not found with id: " + id);
         }
         userRepository.deleteById(id);
     }
