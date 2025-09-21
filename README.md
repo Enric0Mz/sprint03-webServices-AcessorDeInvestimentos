@@ -1,5 +1,13 @@
 # sprint03 - API de Assessor de Investimentos
 
+## Integrantes
+
+Breno Silva - RM97864
+Enrico Marquez - RM99325
+Gustavo Dias - RM550820
+Joel Barros - RM550378
+Leonardo Moreira - RM550988
+
 ## Descrição do Projeto
 
 Esta é uma API REST desenvolvida em Java com Spring Boot que simula o backend de um assessor de investimentos. A aplicação gerencia usuários, seus perfis de risco, produtos de investimento, contas e posições (carteira de investimentos).
